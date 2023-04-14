@@ -1,0 +1,12 @@
+.headline {
+  font-size: 3em;
+  text-align: center;
+  font-family: 'Source Sans Pro Regular', sans-serif;
+}
+
+.info-text {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 2em 0 1em 0;
+  font-family: 'Source Sans Pro Regular', sans-serif;
+}
