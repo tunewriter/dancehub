@@ -1,7 +1,7 @@
 # danceHub
 Website for an up-to-date overview of dance classes in Switzerland
 
-### Current Progress 
+### Roadmap
 - [x] Database schema
 - [x] Demo data inserted
 - [x] API-Endpoints for getting all classes and all classes per weekday
@@ -13,3 +13,7 @@ Website for an up-to-date overview of dance classes in Switzerland
 - **Database:** PostgreSQL
 - **Backend:** Java, Spring Boot, Spring Data JPA
 - **Frontend:** TypeScript, Angular
+
+### Database Schema
+
+![Database Schema](/assets/db_schema.png)
