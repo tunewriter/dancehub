@@ -1,0 +1,45 @@
+caption {
+  font-size: 1.5em;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 8px;
+}
+
+table {
+  width: 100%; /* You can set the width to any percentage or value you prefer */
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+th, td {
+  padding: 9px 20px 9px 10px; /* top right bottom left */
+  text-align: left;
+  min-width: 170px;
+}
+
+.long-name {
+  min-width: 220px;
+}
+
+.short-name {
+  min-width: 50px;
+}
+
+th {
+  border-top: 2px solid #8f8f8f;
+  border-bottom: 1.5px solid #ddd;
+}
+
+td {
+  border-top: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f8f8f8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

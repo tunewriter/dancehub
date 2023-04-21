@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  min-height: 100vh;
+  font-family: 'Source Sans Pro Regular', sans-serif;
+  text-align: center;
+  align-items: center;
+}

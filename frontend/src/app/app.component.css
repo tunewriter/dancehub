@@ -1,12 +1,59 @@
 .headline {
   font-size: 3em;
-  text-align: center;
-  font-family: 'Source Sans Pro Regular', sans-serif;
 }
 
 .info-text {
-  text-align: center;
+  display: inline-block;
   font-size: 1.5em;
   margin: 2em 0 1em 0;
   font-family: 'Source Sans Pro Regular', sans-serif;
+}
+
+body {
+  display: flex;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+.container {
+}
+
+.container .text {
+  position: relative;
+  font-size: 20px;
+  font-weight: 5200;
+}
+
+.text.info-text:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  border-left: 2px solid #000000;
+  animation: animate 12s steps(20) infinite;
+  overflow: hidden;
+}
+
+@keyframes animate {
+  0% {
+    left: 28%;
+  }
+  15%, 85% {
+    left: 100%;
+  }
+  100% {
+    left: 28%;
+  }
+}
+
+.data-table{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 15%;
+  margin-top: 50px;
 }

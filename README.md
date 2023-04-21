@@ -5,14 +5,18 @@ Website for an up-to-date overview of dance classes in Switzerland
 - [x] Database schema
 - [x] Demo data inserted
 - [x] API-Endpoints for getting all classes and all classes per weekday
-- [ ] Frontend page for displaying all classes
+- [x] Frontend page for displaying all classes
 - [ ] Scraper for getting data from dance school
 - [ ] Filter lessons by dance style
 
 ### Technologies
-- **Database:** PostgreSQL
-- **Backend:** Java, Spring Boot, Spring Data JPA
 - **Frontend:** TypeScript, Angular
+- **Backend:** Java, Spring Boot, Spring Data JPA
+- **Scraper**: Python, Selenium
+- **Database:** PostgreSQL
+
+### Screenshots
+![Danceclass Overview](/assets/img1.png)
 
 ### Database Schema
 
