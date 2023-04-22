@@ -28,7 +28,7 @@ public class DanceClassController {
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/course/all")
     public ResponseEntity<List<DanceClass>> getCourses() {
-        return ResponseEntity.ok().body(danceClassRepository.findAll());
+        return ResponseEntity.ok().body(danceClassRepository.findAllWithInstructorLocationAndDanceSchool());
     }
 
     // get course by class_weekday

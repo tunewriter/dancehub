@@ -1,30 +1,33 @@
-
-<table *ngFor="let day of ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag']">
-  <caption>{{ day }}</caption>
-  <thead>
-  <tr>
-    <th class="short-name">Time</th>
-    <th class="long-name">Name</th>
-    <th class="long-name">Instructor</th>
-    <th>School</th>
-    <th class="short-name">Location</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let item of danceClassDict[day]">
-    <td class="short-name">{{ item.start_time | date:'HH:mm'}} to {{item.end_time | date:'HH:mm' }}</td>
-    <td class="long-name">{{ item.dance_class_name }}</td>
-    <td class="long-name">{{ item.instructor.first_name + ' ' + item.instructor.last_name}}</td>
-    <td>
-      <a href="{{item.dance_school.website}}" target="_blank">
-        {{ item.dance_school.dance_school_name}}
-      </a>
-    </td>
-    <td class="short-name" title="{{item.room_name}}">
-      <a href="https://www.google.com/maps/search/{{ encodeURIComponent(item.location.street + ', ' + item.location.city + ', ' + item.location.name) }}" target="_blank">
-        {{ item.location.zip_code + ' ' + item.location.city}}
-      </a>
-    </td>
-  </tr>
-  </tbody>
-</table>
+<div class="table-container">
+  <table *ngFor="let day of ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag']" class="dance-class-table">
+    <caption>{{ day }}</caption>
+    <thead>
+    <tr>
+      <th class="short-name">Time</th>
+      <th class="long-name">Name</th>
+      <th class="long-name">Instructor</th>
+      <th>School</th>
+      <th>Room</th>
+      <th class="short-name">Location</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of danceClassDict[day]">
+      <td class="short-name">{{ item.start_time | date:'HH:mm'}} to {{item.end_time | date:'HH:mm' }}</td>
+      <td class="long-name">{{ item.dance_class_name }}</td>
+      <td class="long-name">{{ item.instructor.first_name + ' ' + item.instructor.last_name}}</td>
+      <td>
+        <a href="{{item.dance_school.website}}" target="_blank">
+          {{ item.dance_school.dance_school_name}}
+        </a>
+      </td>
+      <td>{{ item.room_name }}</td>
+      <td class="short-name" title="{{item.location.name}}">
+        <a href="https://www.google.com/maps/search/{{ encodeURIComponent(item.location.street + ', ' + item.location.city + ', ' + item.location.name) }}" target="_blank">
+          {{ item.location.zip_code + ' ' + item.location.city}}
+        </a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

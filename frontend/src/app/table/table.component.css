@@ -2,28 +2,28 @@ caption {
   font-size: 1.5em;
   text-align: left;
   font-weight: bold;
-  margin-bottom: 10px;
-  margin-left: 8px;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
 }
 
 table {
   width: 100%; /* You can set the width to any percentage or value you prefer */
   border-collapse: collapse;
-  margin-bottom: 40px;
+  margin-bottom: 2.5em;
 }
 
 th, td {
-  padding: 9px 20px 9px 10px; /* top right bottom left */
+  padding: 0.5em 1.2em 0.5em 0.6em; /* top right bottom left */
   text-align: left;
-  min-width: 170px;
+  min-width: 10em;
 }
 
 .long-name {
-  min-width: 220px;
+  min-width: 12em;
 }
 
 .short-name {
-  min-width: 50px;
+  min-width: 6em;
 }
 
 th {
