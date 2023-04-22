@@ -16,14 +16,27 @@ th, td {
   padding: 0.5em 1.2em 0.5em 0.6em; /* top right bottom left */
   text-align: left;
   min-width: 10em;
+  white-space: nowrap;
 }
 
-.long-name {
-  min-width: 12em;
+.col-name {
+  max-width: 12em;
+  width: 12em;
 }
 
-.short-name {
+.col-instructor {
+  max-width: 9em;
+  width: 9em;
+}
+
+.col-time, .col-location {
+  min-width: 3em;
+  width: 3em;
+}
+
+.col-school {
   min-width: 6em;
+  width: 6em;
 }
 
 th {
@@ -42,4 +55,67 @@ tbody tr:hover {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.truncate {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+@media screen and (max-width: 600px) {
+  table {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* Hide the Instructor, Room, and Location columns */
+  .dance-class-table th.col-instructor,
+  .dance-class-table td.col-instructor,
+  .dance-class-table th.col-room,
+  .dance-class-table td.col-room,
+  .dance-class-table th.col-location,
+  .dance-class-table td.col-location {
+    display: none;
+    font-size: 0.5em;
+  }
+
+  caption {
+    text-align: left;
+    padding-left: 2em;
+    font-size: 1.2em;
+  }
+  th, td{
+    text-align: center;
+  }
+
+  .col-time{
+    padding-left: 2.5em;
+  }
+
+  .col-school{
+    text-align: right;
+    padding-right: 2.5em;
+  }
+
+
+  table {
+    width: auto;
+    border-collapse: collapse;
+    margin-bottom: 2.5em;
+    box-sizing: border-box;
+    position: relative;
+    left: 5em
+  }
+
+  thead, tbody {
+  }
+
+  .hide{
+    display: none;
+  }
+
 }

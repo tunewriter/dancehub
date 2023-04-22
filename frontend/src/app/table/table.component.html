@@ -3,26 +3,26 @@
     <caption>{{ day }}</caption>
     <thead>
     <tr>
-      <th class="short-name">Time</th>
-      <th class="long-name">Name</th>
-      <th class="long-name">Instructor</th>
-      <th>School</th>
-      <th>Room</th>
-      <th class="short-name">Location</th>
+      <th class="col-time">Time</th>
+      <th class="col-name">Name</th>
+      <th class="col-instructor">Instructor</th>
+      <th class="col-school">School</th>
+      <th class="col-room">Room</th>
+      <th class="col-location">Location</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let item of danceClassDict[day]">
-      <td class="short-name">{{ item.start_time | date:'HH:mm'}} to {{item.end_time | date:'HH:mm' }}</td>
-      <td class="long-name">{{ item.dance_class_name }}</td>
-      <td class="long-name">{{ item.instructor.first_name + ' ' + item.instructor.last_name}}</td>
-      <td>
+      <td class="col-time">{{ item.start_time | date:'HH:mm'}} <span class="hide">to {{item.end_time | date:'HH:mm' }}</span></td>
+      <td class="col-name">{{ item.dance_class_name }}</td>
+      <td class="col-instructor"><a class="truncate">{{ item.instructor.first_name + ' ' + item.instructor.last_name}}</a></td>
+      <td class="col-school">
         <a href="{{item.dance_school.website}}" target="_blank">
           {{ item.dance_school.dance_school_name}}
         </a>
       </td>
-      <td>{{ item.room_name }}</td>
-      <td class="short-name" title="{{item.location.name}}">
+      <td class="col-room">{{ item.room_name }}</td>
+      <td class="col-location" title="{{item.location.name}}">
         <a href="https://www.google.com/maps/search/{{ encodeURIComponent(item.location.street + ', ' + item.location.city + ', ' + item.location.name) }}" target="_blank">
           {{ item.location.zip_code + ' ' + item.location.city}}
         </a>
